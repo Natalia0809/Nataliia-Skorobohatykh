@@ -86,3 +86,4 @@ function capitalizeFirstLetter(string) {
     return words.join(' ');    
 }
 console.log(capitalizeFirstLetter('i love java script'));
+z
