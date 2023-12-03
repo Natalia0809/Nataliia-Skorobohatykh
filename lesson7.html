@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button and Link Events</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.5s;
+    }
+</style>
+</head>
+<body>  
+<!-- task 2 -->
+    <p id ='text'>I learn JavaScript events!</p>
+<div>
+	<button onclick="changeCSS()">  Change style! </button>
+</div>
+<!-- task 3 -->
+<button id="btn1">Blue</button>
+<button id="btn2">Pink</button>
+<button id="btn3">Hold to Brown</button>
+<a href="#" id="myLink">Hover for Yellow</a>
+<script src="Lesson 7/lesson7.js"></script>
+<!-- task 4 -->
+<select id="myDropdown">
+    <option value="item1"> Peter </option>
+    <option value="item2"> John </option>
+    <option value="item3"> Alise </option>
+    <option value="item4"> Alex </option>
+    <option value="item5"> Iren </option>
+  </select>
+<!-- task 5 -->
+  <button onclick="deleteSelectedItem()"> Choose and Delete </button>
+  <button id="myButton"> Live button! </button></button>
+<!-- task 6 -->
+ <p id="message"></p>
+ <p>Window size:</p>
+ <p id="sizeInfo"></p>
+<!-- task 7 -->
+ <select name="country" id="country" onchange="populateCities()">
+    <option value="ger">Germany</option>
+    <option value="usa">USA</option>
+    <option value="ukr">Ukraine</option>
+  </select>
+  <select name="cities" id="cities" onchange="displaySelection()"></select>
+  <p id="selectionInfo"></p>
+</body>
+</html>
