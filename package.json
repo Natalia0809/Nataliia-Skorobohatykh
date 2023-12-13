@@ -1,0 +1,11 @@
+{
+  "name": "nataliia-skorobohatykh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lesson10.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nataliia Skorobohatykh",
+  "license": "ISC"
+}
