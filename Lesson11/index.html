@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #voteButton {
+            background-color: #F0F0F0; 
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px; 
+            margin-left: 20px; 
+        }
+        #resultMessageContainer {
+            display: none;
+            margin-top: 20px; 
+            margin-left: 20px; 
+        }
+        #resultMessage {
+            font-size: 18px;
+            background-color: #F0F0F0; 
+            padding: 10px 20px;
+            display: inline-block; 
+        }
+    </style>
+</head>
+<body>
+
+<button id="voteButton" onclick="vote()">Vote!</button>
+<div id="resultMessageContainer">
+    <div id="resultMessage"></div>
+</div>
+
+<script>
+function vote() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("voteButton").style.display = "none";
+            document.getElementById("resultMessage").innerHTML = "Your vote is accepted. " + this.responseText;
+            document.getElementById("resultMessageContainer").style.display = "block";
+        }
+    };
+    xhttp.open("GET", "/lesson11", true);
+    xhttp.send();
+}
+</script>
+
+</body>
+</html>
